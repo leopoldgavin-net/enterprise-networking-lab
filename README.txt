@@ -1,144 +1,96 @@
-# Enterprise Hospital Network Design (Cisco Packet Tracer)
+# Hospital Network Simulation - Cisco Packet Tracer
 
 ## Overview
 
-This project simulates the design and implementation of an enterprise hospital network supporting multiple departments, centralized services, and scalable infrastructure.
+This project is a simulated hospital network created in Cisco Packet Tracer.
 
-The goal was to design the network using enterprise principles including segmentation, scalability, redundancy, security, and operational management.
+The goal of this project is to practice networking fundamentals including VLANs, routing, DHCP, DNS, and basic network design.
 
-
-## Business Requirements
-
-The hospital requires:
-
-- Separate networks for different departments
-- Centralized infrastructure services
-- Scalable design for future expansion
-- Reliable connectivity between departments
-- Secure access controls between sensitive systems
+The network was built in phases, starting from a small LAN and expanding into a multi-department environment.
 
 
-## Network Architecture
+## Objectives
 
-Architecture Model:
-
-Collapsed Core Enterprise Design
-
-Layers:
-
-- Core Layer
-- Access Layer
+- Design a basic enterprise-style network
+- Separate departments using VLANs
+- Configure communication between networks
+- Centralize network services
+- Practice Cisco IOS configuration
 
 
-## Technologies Implemented
+## Technologies Used
 
-- VLAN Segmentation
-- 802.1Q Trunking
+- Cisco Packet Tracer
+- Cisco IOS Commands
+- VLANs
+- Trunk Ports
 - Inter-VLAN Routing
-- DHCP Services
-- DHCP Relay
-- DNS Services
-- Internal Web Hosting
-- Enterprise IP Addressing
-
-Future:
-
-- OSPF Dynamic Routing
-- EtherChannel
-- HSRP Redundancy
-- Wireless LAN
-- ACL Security Policies
-- Network Monitoring
+- DHCP
+- DNS
 
 
-## VLAN Design
+## Network Layout
 
-| VLAN | Name | Purpose |
-|----|----|----|
-|10|ADMIN|Administrative users|
-|20|MEDICAL|Doctors and nurses|
-|30|MEDICAL_DEVICES|Healthcare equipment|
-|40|LAB|Laboratory systems|
-|50|SERVERS|Infrastructure services|
-|70|SECURITY|Security cameras/access systems|
-|80|GUEST|Visitor network|
+Current departments:
+
+| Department | VLAN |
+|-----------|------|
+|Administration|10|
+|Medical Staff|20|
+|Servers|50|
+|Guest Network|80|
 
 
 ## IP Addressing
 
-| Network | Subnet | Gateway |
-|-|-|-|
-|Admin|10.20.10.0/24|10.20.10.1|
-|Medical|10.20.20.0/24|10.20.20.1|
-|Servers|10.20.50.0/24|10.20.50.1|
-|Guest|10.20.80.0/24|10.20.80.1|
-
-
-## Current Topology
-
-(Insert topology image)
+| VLAN | Network |
+|----|----|
+|10|10.20.10.0/24|
+|20|10.20.20.0/24|
+|50|10.20.50.0/24|
+|80|10.20.80.0/24|
 
 
 ## Project Phases
 
-### Phase 1 - Network Foundation
+### Phase 1 - Basic Network Setup
+
 Completed:
+- Added router and switch
+- Created VLANs
+- Configured trunk links
+- Enabled communication between VLANs
 
-- VLAN creation
-- Router-on-a-stick
-- Inter-VLAN communication
 
+### Phase 2 - Network Services
 
-### Phase 2 - Enterprise Services
 Completed:
+- Added server network
+- Configured DHCP
+- Configured DNS
+- Hosted internal webpage
 
-- DHCP Server
-- DHCP Relay
-- DNS
-- Internal web services
 
+### Phase 3 - Network Expansion
 
-### Phase 3 - Campus Expansion
 In Progress:
-
-- Core switch implementation
-- Floor access switches
-- Additional departments
-
-
-### Phase 4 - Routing Expansion
-
-Planned:
-
-- Dynamic routing
+- Add additional switches
+- Add more departments
+- Improve network layout
 
 
-### Phase 5 - High Availability
+Future Improvements:
 
-Planned:
-
-- HSRP
-- EtherChannel
-
-
-### Phase 6 - Security
-
-Planned:
-
-- ACLs
-- SSH hardening
-- Port security
+- Wireless networking
+- Network security
+- Redundancy
+- Monitoring
 
 
-## Testing
+## What I Learned
 
-|Test|Expected Result|Status|
-|-|-|-|
-|VLAN routing|Departments communicate|Passed|
-|DHCP assignment|Clients receive IP addresses|Passed|
-|DNS lookup|Names resolve correctly|Passed|
-
-
-## Lessons Learned
-
-(Document problems encountered and troubleshooting steps)
+- How VLANs separate network traffic
+- How trunk ports carry multiple VLANs
+- How routers allow VLAN communication
+- How DHCP simplifies IP management
+- How DNS resolves names to IP addresses
